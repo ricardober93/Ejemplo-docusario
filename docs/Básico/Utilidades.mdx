@@ -1,0 +1,46 @@
+---
+sidebar_position: 4
+---
+
+# Utilidades
+
+Nuestro Framework tiene componentes especiales para facilitar el trabajo a tu equipo.
+
+## SnackBar
+
+Los snacbar es un implementación podedora para activar notificaciones, y darle feedback a los usuarios.
+
+```jsx title="root.tsx"
+
+<Layout>
+ <SnackBarProvider>
+  {children} 
+ </SnackBarProvider>
+</Layout>
+```
+
+```jsx title="componentA.tsx"
+
+export const component = () => {
+
+  const { snackbar } = useSnackBar(); 
+
+  const handlerEvent = () => {
+
+    ...some logic
+
+    snackBar({
+      title: "Titulo del proyecto",
+      message: "mensaje sobre la utilidad",
+      type: "success,
+      position: "botton"
+    })
+
+  }
+
+  ... return
+}
+```
+
+
+## Otras Utilidades
